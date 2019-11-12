@@ -33,6 +33,13 @@ class SuggestionView extends React.Component {
     this.getBookSuggestion();
   }
 
+  /* Sends request to server to get a book suggestion from google books API.
+  * If the book suggestion is already in the logged in user's
+  * "yes" or "no" list, resend the getBookSuggestion request.
+  * We could also do this server side, by getting the response and checking
+  * the user's database. Send back the first item in the Query to Googls API
+  * */
+
   // Request to server to get a new book suggestion
   getBookSuggestion() {
     return axios.get('/readr/suggestion').then((retrievedBook) => {

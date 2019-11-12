@@ -27,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
 function UserFollower(props) {
   const classes = useStyles();
   const { user} = props;
-  console.log(user);
   return (
     <div>
       <Paper className={classes.paper}>

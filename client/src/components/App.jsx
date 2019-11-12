@@ -32,13 +32,6 @@ class App extends React.Component {
     };
   }
 
-  /* Sends request to server to get a book suggestion from google books API.
-  * If the book suggestion is already in the logged in user's
-  * "yes" or "no" list, resend the getBookSuggestion request.
-  * We could also do this server side, by getting the response and checking
-  * the user's database. Send back the first item in the Query to Googls API
-  * */
-
   componentDidMount() {
     axios.get('/auth/user').then((response) => {
       // console.log(response.data);
@@ -58,7 +51,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { isLoggedIn, user, userBookList } = this.state;
+    const { isLoggedIn, user } = this.state;
     return (
       <MuiThemeProvider theme={theme}>
         <div className="App">

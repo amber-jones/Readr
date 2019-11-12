@@ -32,7 +32,6 @@ class FollowingView extends React.Component {
   getFollowers() {
     return axios.get('/readr/followers')
       .then((followers) => {
-        console.log(followers.data);
         this.setState({ followers: followers.data });
       })
       .catch((error) => console.log(error));
@@ -41,7 +40,6 @@ class FollowingView extends React.Component {
   getFollowing() {
     return axios.get('/readr/following')
       .then((following) => {
-        console.log(following.data);
         this.setState({ following: following.data });
       })
       .catch((error) => console.log(error));
@@ -57,7 +55,6 @@ class FollowingView extends React.Component {
       .catch(() => {
         this.resetIdState();
         this.componentDidMount();
-        //  if there is not a user with that id, we want to send back
       });
   }
 

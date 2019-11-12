@@ -23,11 +23,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-// a single user that follows the main user
+// a single user that following the main user
 function UserFollowing(props) {
   const classes = useStyles();
   const { user, handleUnfollowClick } = props;
-  console.log(user);
   return (
     <div>
       <Paper className={classes.paper}>
@@ -39,7 +38,7 @@ function UserFollowing(props) {
                   {user.username}
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  {user.id}
+                  User ID: {user.id}
                 </Typography>
               </Grid>
               <Grid item>

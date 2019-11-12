@@ -88,11 +88,11 @@ export default function FollowTabs(props) {
           <FollowForm handleFollowClick={handleFollowClick} handleIdChange={handleIdChange} followerID={followerID} />
         </div>
         <br />
-        {/* This is iterating over the Following List and populating each user onto the view */}
         {following === null || followers.length === 0 ? (
           <div>You are not following any users! </div>
         ) : (
           <div>
+            {/* This is iterating over the Following List and populating each user onto the view */}
             {Object.keys(following).map((user) => (
               <UserFollowing user={following[user]} handleUnfollowClick={handleUnfollowClick} />))}
           </div>
@@ -103,11 +103,11 @@ export default function FollowTabs(props) {
           <div>No users are following you! </div>
         ) : (
           <div>
+            {/* This is iterating over the Followers List and populating each user onto the view */}
             {Object.keys(followers).map((user) => (
               <UserFollower user={followers[user]} />))}
           </div>
         )}
-        {/* This is iterating over the Followers List and populating each user onto the view */}
       </TabPanel>
     </div>
   );
